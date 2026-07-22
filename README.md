@@ -38,13 +38,13 @@ A aplicação permite:
 ## 1. Clonar o projeto
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/GbNymos/controle_de_gastos_residencial.git
 ```
 
 Entrar na pasta:
 
 ```bash
-cd controle_de_gastos_residenciais
+cd controle_de_gastos_residencial
 ```
 
 ---
