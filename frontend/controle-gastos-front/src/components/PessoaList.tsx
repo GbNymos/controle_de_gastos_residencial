@@ -30,7 +30,7 @@ export default function PessoaList({
       <table>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Registro</th>
             <th>Nome</th>
             <th>Idade</th>
             <th>Ações</th>
