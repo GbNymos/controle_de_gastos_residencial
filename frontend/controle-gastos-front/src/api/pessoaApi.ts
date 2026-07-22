@@ -1,5 +1,5 @@
 import { api } from "./apiClient";
-import type { PessoaRequest, PessoaResponse } from "../types/Pessoa";
+import type { PessoaRequest, PessoaResponse } from "../models/Pessoa";
 
 
 // Cadastra uma nova pessoa no sistema
