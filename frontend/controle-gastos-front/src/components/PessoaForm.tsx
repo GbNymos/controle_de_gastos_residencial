@@ -7,18 +7,18 @@ interface PessoaFormProps {
 
 export default function PessoaForm({ onSalvar }: PessoaFormProps) {
   const [nome, setNome] = useState("");
-  const [idade, setIdade] = useState(0);
+  const [idade, setIdade] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
     await onSalvar({
       nome,
-      idade,
+      idade: Number(idade),
     });
 
     setNome("");
-    setIdade(0);
+    setIdade("");
   }
 
   return (
