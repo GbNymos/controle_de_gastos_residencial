@@ -10,7 +10,7 @@ export function cadastrarPessoa(
     pessoa: PessoaRequest
 ): Promise<PessoaResponse> {
 
-    return api<PessoaResponse>(
+    return apiClient<PessoaResponse>(
         "/Pessoa",
         {
             method: "POST",
