@@ -18,6 +18,23 @@ builder.Services.AddScoped<PessoaService>();
 builder.Services.AddScoped<TransacaoService>();
 var app = builder.Build(); 
 
+// Aplica automaticamente as migrations pendentes
+// e cria o banco SQLite caso ele ainda não exista.
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    dbContext.Database.Migrate();
+}
+
+
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -25,9 +42,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
 
 app.MapControllers(); 
-
 
 app.Run();
