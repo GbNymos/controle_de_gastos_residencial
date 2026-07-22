@@ -68,13 +68,51 @@ select {
 }
 
 
+
 button {
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
+    width: 50%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin: 1%;
 }
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+
+button:hover {
+  opacity: .85;
+}
+
 
 
 .btn-primary {
