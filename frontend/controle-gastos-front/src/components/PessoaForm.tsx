@@ -38,7 +38,7 @@ export default function PessoaForm({ onSalvar }: PessoaFormProps) {
         <input
           type="number"
           value={idade}
-          onChange={(e) => setIdade(Number(e.target.value))}
+          onChange={(e) => setIdade(e.target.value)}
         />
       </div>
 
