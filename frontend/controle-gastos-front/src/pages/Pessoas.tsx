@@ -1,3 +1,6 @@
+// Página principal responsável por gerenciar pessoas e transações.
+// Controla os estados, chama os serviços da API e coordena os componentes visuais.
+
 import { useEffect, useState } from "react";
 
 import PessoaForm from "../components/PessoaForm";
