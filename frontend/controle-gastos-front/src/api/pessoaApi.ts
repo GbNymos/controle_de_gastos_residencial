@@ -1,4 +1,7 @@
-import { api } from "./apiClient";
+// Arquivo criado temporariamente para testes do endpoint de cadastro de pessoas.
+// Não faz parte do fluxo principal da aplicação e pode ser removido caso não seja utilizado.
+
+import { apiClient } from "./apiClient";
 import type { PessoaRequest, PessoaResponse } from "../models/Pessoa";
 
 
