@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ControleGastos.Api.Models;
 
-    public class PessoasModel
+    public class PessoaModel
     {
         [Key]
         public int PessoaId { get; set; }
@@ -17,6 +17,6 @@ namespace ControleGastos.Api.Models;
         public bool MenorDeIdade => Idade < 18;
 
         // Lista de transações pertencentes a essa pessoa
-        public ICollection<TransacoesModel> Transacoes { get; set; } = new List<TransacoesModel>();
+        public ICollection<TransacaoModel> Transacoes { get; set; } = new List<TransacaoModel>();
 
     }

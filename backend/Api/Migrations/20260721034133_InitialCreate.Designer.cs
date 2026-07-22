@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleGastos.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260721012835_InitialCreate")]
+    [Migration("20260721034133_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -19,7 +19,7 @@ namespace ControleGastos.Api.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.19");
 
-            modelBuilder.Entity("ControleGastos.Api.Models.PessoasModel", b =>
+            modelBuilder.Entity("ControleGastos.Api.Models.PessoaModel", b =>
                 {
                     b.Property<int>("PessoaId")
                         .ValueGeneratedOnAdd()
@@ -37,7 +37,7 @@ namespace ControleGastos.Api.Migrations
                     b.ToTable("Pessoas");
                 });
 
-            modelBuilder.Entity("ControleGastos.Api.Models.TransacoesModel", b =>
+            modelBuilder.Entity("ControleGastos.Api.Models.TransacaoModel", b =>
                 {
                     b.Property<int>("TransacaoId")
                         .ValueGeneratedOnAdd()
@@ -63,9 +63,9 @@ namespace ControleGastos.Api.Migrations
                     b.ToTable("Transacoes");
                 });
 
-            modelBuilder.Entity("ControleGastos.Api.Models.TransacoesModel", b =>
+            modelBuilder.Entity("ControleGastos.Api.Models.TransacaoModel", b =>
                 {
-                    b.HasOne("ControleGastos.Api.Models.PessoasModel", "Pessoa")
+                    b.HasOne("ControleGastos.Api.Models.PessoaModel", "Pessoa")
                         .WithMany("Transacoes")
                         .HasForeignKey("PessoaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -74,7 +74,7 @@ namespace ControleGastos.Api.Migrations
                     b.Navigation("Pessoa");
                 });
 
-            modelBuilder.Entity("ControleGastos.Api.Models.PessoasModel", b =>
+            modelBuilder.Entity("ControleGastos.Api.Models.PessoaModel", b =>
                 {
                     b.Navigation("Transacoes");
                 });

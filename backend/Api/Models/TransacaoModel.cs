@@ -8,7 +8,7 @@ public enum TipoTransacao //Tipos de transacoes recebe apena dois valores padrao
     Despesa
 }
 
-public class TransacoesModel
+public class TransacaoModel
 {
     [Key]
     public int TransacaoId { get; set; }
@@ -27,6 +27,6 @@ public class TransacoesModel
     // Chave estrangeira da pessoa
     public int PessoaId { get; set; }
 
-    // Relaciona PessoasModel com as Transacoes.
-    public PessoasModel Pessoa { get; set; } = null!;
+    // Relaciona PessoaModel com as Transacoes.
+    public PessoaModel Pessoa { get; set; } = null!;
 }
