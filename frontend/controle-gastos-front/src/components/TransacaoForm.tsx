@@ -15,7 +15,7 @@ export default function TransacaoForm({
   onSalvar,
 }: Props) {
   const [descricao, setDescricao] = useState("");
-  const [valor, setValor] = useState(0);
+  const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState(TipoTransacao.Despesa);
   const [pessoaId, setPessoaId] = useState(0);
 
@@ -40,13 +40,13 @@ export default function TransacaoForm({
 
     await onSalvar({
       descricao,
-      valor,
+      valor: Number(valor),
       tipo,
       pessoaId,
     });
 
     setDescricao("");
-    setValor(0);
+    setValor("");
   }
 
   return (
@@ -88,7 +88,7 @@ export default function TransacaoForm({
           type="number"
           value={valor}
           onChange={(e) =>
-            setValor(Number(e.target.value))
+            setValor(e.target.value)
           }
         />
       </div>
